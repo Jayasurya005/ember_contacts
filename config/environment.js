@@ -5,6 +5,20 @@ module.exports = function(environment) {
     modulePrefix: 'contacts',
     environment,
     rootURL: '/',
+    firebase:{
+    apiKey: "AIzaSyCMblZcYGjuUhht-IGggqHSWsi7oq23lxg",
+  authDomain: "contacts-537fb.firebaseapp.com",
+  projectId: "contacts-537fb",
+  storageBucket: "contacts-537fb.appspot.com",
+  messagingSenderId: "477112062787",
+  appId: "1:477112062787:web:611c7b8c83a6f5a398d5f6",
+  measurementId: "G-HWJW3P15JC"
+},
+contentSecurityPolicy: {
+    'script-src': "'self' 'unsafe-eval' apis.google.com",
+    'frame-src': "'self' https://*.firebaseapp.com",
+    'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+  },
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

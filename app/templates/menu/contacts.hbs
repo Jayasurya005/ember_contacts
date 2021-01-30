@@ -1,0 +1,35 @@
+<div value=animation id="animation">
+<h1>=>List of Contacts
+<button class="new">
+{{#link-to "menu.new" class="link"}}
++ New
+{{/link-to}}
+</button>
+</h1>
+<br>
+
+<table class="table" id="table" value=table border="1">
+<tr>
+<td class="bold">Name</td>
+<td class="bold td">Email</td>
+<td class="bold td">Phone</td>
+<td class="bold td">country</td>
+<td class="bold td">City</td>
+</tr>
+<tbody>
+{{#each this.model as |contact|}}
+<tr class="tr"  {{action "redirect" contact}} >
+<td>{{contact.name}}</td>
+<td class="td">{{contact.email}}</td>
+<td class="td">{{contact.phone}}</td>
+<td class="td">{{contact.country}}</td>
+<td class="td">{{contact.city}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</div>
+<div id="details" class="details">
+<button {{action "close"}} class="close">X</button><br>
+{{outlet}}
+</div>
